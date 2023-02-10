@@ -47,6 +47,8 @@ int last_deteksi4 = 1;
 int last_deteksi5 = 1;
 int last_deteksi6 = 1;
 
+int conveyor = 0;
+
 void setup() {
   pinMode(BUZZER_PIN, OUTPUT);
   digitalWrite(BUZZER_PIN, LOW);
@@ -103,6 +105,13 @@ void loop() {
     tambahBuah(6);
   }
 
+  getConveyor();
+  if(conveyor == 1){
+    digitalWrite(pinRelay, HIGH);
+  }else{
+    digitalWrite(pinRelay, LOW);
+  }
+
   last_deteksi1 = deteksi1;
   last_deteksi2 = deteksi2;
   last_deteksi3 = deteksi3;
@@ -141,6 +150,16 @@ void tambahBuah(int nomor) {
   }
 }
 
+
+void getConveyor(){
+  if (Firebase.getString(firebaseData, "/conveyor")) {
+    if (firebaseData.dataType() == "int") {
+      conveyor = firebaseData.intData();
+    }
+  }
+  Serial.print("CONVEYOR : ");
+  Serial.println(conveyor);
+}
 
 int getJumlahBuah(int nomor) {
   String dirStr = "/counter/sensor" + String(nomor) + "/count";
