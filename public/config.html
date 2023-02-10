@@ -66,13 +66,13 @@
     <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
       <ul class="navbar-nav navbar-nav-hover ms-auto">   
         <li class="nav-item ms-lg-auto">
-          <a class="nav-link nav-link-icon me-2" href="index.html" >
+          <a class="nav-link nav-link-icon me-2" href="index.html">
             <i class="fa fa-github me-1"></i>
             <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data terbaru">Dashboard</p>
           </a>
         </li>        
         <li class="nav-item ms-lg-auto">
-          <a class="nav-link nav-link-icon me-2" href="data_record.html" >
+          <a class="nav-link nav-link-icon me-2" href="data_record.html">
             <i class="fa fa-github me-1"></i>
             <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Lihat data tersimpan">Data Record</p>
           </a>
@@ -113,8 +113,8 @@
     <div class="row">
       <div class="row justify-content-center text-center my-sm-5">
         <div class="col-lg-6">          
-          <h2 class="text-dark mb-0">Dashboard</h2>
-          <p class="lead">Jumlah Buah Naga berdasarkan Kategori</p>
+          <h2 class="text-dark mb-0">Label</h2>
+          <p class="lead">Ubah label berdasarkan Kategori</p>
         </div>
       </div>
     </div>
@@ -122,23 +122,47 @@
       <div class="col-lg-9 mx-auto py-3">
         <div class="row">
           <div class="col-md-4 position-relative">
-            <div class="p-3 text-center">
-              <h1 class="text-gradient text-primary"><span id="state1" countTo="70">0</span></h1>
-              <h5 class="mt-3" id="label1">Label 1</h5>              
+            <div class="p-3 text-center">    
+            <h5 class="mt-3" id="label1Txt">Label 1</h5>                        
+              <div class="row text-center py-3 mt-3">
+                <div class="mx-auto">
+                  <div class="input-group input-group-dynamic">
+                    <label class="form-label">Ganti Label 1</label>
+                    <input type="text" class="form-control" id="label1">                     
+                  </div>
+                </div>
+              </div>
+              
+                          
             </div>
             <hr class="vertical dark">
           </div>
           <div class="col-md-4 position-relative">
             <div class="p-3 text-center">
-              <h1 class="text-gradient text-primary"> <span id="state2" countTo="15">0</span></h1>
-              <h5 class="mt-3" id="label2">Label 2</h5> 
+                <h5 class="mt-3" id="label2Txt">Label 2</h5>    
+                <div class="row text-center py-3 mt-3">
+                    <div class="mx-auto">
+                        <div class="input-group input-group-dynamic">
+                        <label class="form-label">Ganti Label 2</label>
+                        <input type="text" class="form-control" id="label2">
+                        </div>
+                    </div>
+                </div>
             </div>
             <hr class="vertical dark">
           </div>
           <div class="col-md-4">
+            
             <div class="p-3 text-center">
-              <h1 class="text-gradient text-primary" id="state3" countTo="4">0</h1>
-              <h5 class="mt-3" id="label3">Label 3</h5> 
+                <h5 class="mt-3" id="label3Txt">Label 3</h5>  
+                <div class="row text-center py-3 mt-3">
+                    <div class="mx-auto">
+                        <div class="input-group input-group-dynamic">
+                        <label class="form-label">Ganti Label 3</label>
+                        <input type="text" class="form-control" id="label3">
+                        </div>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
@@ -148,36 +172,51 @@
       <div class="col-lg-9 mx-auto py-3">
         <div class="row">
           <div class="col-md-4 position-relative">
+          
             <div class="p-3 text-center">
-              <h1 class="text-gradient text-primary"><span id="state4" countTo="70">0</span></h1>
-              <h5 class="mt-3" id="label4">Label 4</h5> 
+                <h5 class="mt-3" id="label4Txt">Label 4</h5>   
+              <div class="row text-center py-3 mt-3">
+                <div class="mx-auto">
+                  <div class="input-group input-group-dynamic">
+                    <label class="form-label">Ganti Label 4</label>
+                    <input type="text" class="form-control" id="label4">                    
+                  </div>
+                </div>
+              </div>
             </div>
             <hr class="vertical dark">
           </div>
-          <div class="col-md-4 position-relative">
+          <div class="col-md-4 position-relative">             
             <div class="p-3 text-center">
-              <h1 class="text-gradient text-primary"> <span id="state5" countTo="15">0</span></h1>
-              <h5 class="mt-3" id="label5">Label 5</h5> 
+                <h5 class="mt-3" id="label5Txt">Label 5</h5>  
+                <div class="row text-center py-3 mt-3">
+                    <div class="mx-auto">
+                        <div class="input-group input-group-dynamic">
+                        <label class="form-label">Ganti Label 5</label>
+                        <input type="text" class="form-control" id="label5">
+                        </div>
+                    </div>
+                </div>
             </div>
             <hr class="vertical dark">
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4">           
             <div class="p-3 text-center">
-              <h1 class="text-gradient text-primary" id="state6" countTo="4">0</h1>
-              <h5 class="mt-3" id="label6">Label 6</h5> 
+                <h5 class="mt-3" id="label6Txt">Label 6</h5>   
+              <div class="row text-center py-3 mt-3">
+                <div class="mx-auto">
+                  <div class="input-group input-group-dynamic">
+                    <label class="form-label">Ganti Label 6</label>
+                    <input type="text" class="form-control" id="label6">
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>        
       </div>
     </div>
-
-      <div class="row text-center justify-content-center">
-        <div class="col-12">
-          <button type="button" class="btn btn-primary" id="resetBtn">Reset Counter</button>
-        </div>
-      </div>
-   
-    
+     
   </div>
 </section>
 
@@ -258,123 +297,68 @@
   let sensor1Obj, sensor2Obj, sensor3Obj, sensor4Obj, sensor5Obj, sensor6Obj;
   let counterObj;
 
-  
- 
-  get(child(dbRef, '/counter')).then((snapshot) => {
-          
-            if (snapshot.exists()){
-              counterObj = snapshot.val();
-              sensor1Obj = counterObj.sensor1;  
-              sensor2Obj = counterObj.sensor2;  
-              sensor3Obj = counterObj.sensor3;  
-              sensor4Obj = counterObj.sensor4;  
-              sensor5Obj = counterObj.sensor5;  
-              sensor6Obj = counterObj.sensor6;                            
-            }else {
-              console.log("No data available");
-            }
-          }).catch((error) => {
-            console.error(error);
-          }).finally(() => {
+    const counterRef = ref(db, 'counter');
+        onValue(counterRef, (snapshot) => {
+        
 
-            document.getElementById('label1').textContent = sensor1Obj.label;
-            document.getElementById('label2').textContent = sensor2Obj.label;
-            document.getElementById('label3').textContent = sensor3Obj.label;
-            document.getElementById('label4').textContent = sensor4Obj.label;
-            document.getElementById('label5').textContent = sensor5Obj.label;
-            document.getElementById('label6').textContent = sensor6Obj.label;
+        
+            counterObj = snapshot.val();                     
+            document.getElementById('label1Txt').textContent = counterObj.sensor1.label;
+            document.getElementById('label2Txt').textContent = counterObj.sensor2.label;
+            document.getElementById('label3Txt').textContent = counterObj.sensor3.label;
+            document.getElementById('label4Txt').textContent = counterObj.sensor4.label;
+            document.getElementById('label5Txt').textContent = counterObj.sensor5.label;
+            document.getElementById('label6Txt').textContent = counterObj.sensor6.label;
             
-            if (document.getElementById('state1')) {
-              const countUp = new CountUp('state1', sensor1Obj.count);
-              if (!countUp.error) {
-                countUp.start();
-              } else {
-                console.error(countUp.error);
-              }
-            }
-            if (document.getElementById('state2')) {
-              const countUp = new CountUp('state2', sensor2Obj.count);
-              if (!countUp.error) {
-                countUp.start();
-              } else {
-                console.error(countUp.error);
-              }
-            }
-            if (document.getElementById('state3')) {
-              const countUp = new CountUp('state3', sensor3Obj.count);
-              if (!countUp.error) {
-                countUp.start();
-              } else {
-                console.error(countUp.error);
-              }
-            }
-            if (document.getElementById('state4')) {
-              const countUp = new CountUp('state4', sensor4Obj.count);
-              if (!countUp.error) {
-                countUp.start();
-              } else {
-                console.error(countUp.error);
-              }
-            }if (document.getElementById('state5')) {
-              const countUp = new CountUp('state5', sensor5Obj.count);
-              if (!countUp.error) {
-                countUp.start();
-              } else {
-                console.error(countUp.error);
-              }
-            }if (document.getElementById('state6')) {
-              const countUp = new CountUp('state6', sensor6Obj.count);
-              if (!countUp.error) {
-                countUp.start();
-              } else {
-                console.error(countUp.error);
-              }
-            }
-            initiated = true;
-            document.getElementById("resetBtn").addEventListener("click", resetCounter);
-
-          });
-
 
         
 
-      const counterRef = ref(db, 'counter');
-          onValue(counterRef, (snapshot) => {
-            
+    });
 
-            if(initiated){
-              counterObj = snapshot.val();            
-              let count1 = counterObj.sensor1.count;              
-              document.getElementById('state1').textContent = count1;
+    document.getElementById("label1").addEventListener("change", gantiLabel1);
 
-              let count2 = counterObj.sensor2.count;              
-              document.getElementById('state2').textContent = count2;
+    function gantiLabel1(){
+        let teks = document.getElementById("label1").value;
+        set(ref(db, 'counter/sensor1/label'), teks);   
+    }
 
-              let count3 = counterObj.sensor3.count;              
-              document.getElementById('state3').textContent = count3;
 
-              let count4 = counterObj.sensor4.count;              
-              document.getElementById('state4').textContent = count4;
+    document.getElementById("label2").addEventListener("change", gantiLabel2);
 
-              let count5 = counterObj.sensor5.count;              
-              document.getElementById('state5').textContent = count5;
+    function gantiLabel2(){
+        let teks = document.getElementById("label2").value;
+        set(ref(db, 'counter/sensor2/label'), teks);   
+    }
 
-              let count6 = counterObj.sensor6.count;              
-              document.getElementById('state6').textContent = count6;
+    document.getElementById("label3").addEventListener("change", gantiLabel3);
 
-            }
-   
-      });
+    function gantiLabel3(){
+        let teks = document.getElementById("label3").value;
+        set(ref(db, 'counter/sensor3/label'), teks);   
+    }
 
-      function resetCounter(){
-        set(ref(db, 'counter/sensor1/count'), parseInt(0));   
-        set(ref(db, 'counter/sensor2/count'), parseInt(0));   
-        set(ref(db, 'counter/sensor3/count'), parseInt(0));   
-        set(ref(db, 'counter/sensor4/count'), parseInt(0));   
-        set(ref(db, 'counter/sensor5/count'), parseInt(0));   
-        set(ref(db, 'counter/sensor6/count'), parseInt(0));   
-      }
- 
+    document.getElementById("label4").addEventListener("change", gantiLabel4);
+
+    function gantiLabel4(){
+        let teks = document.getElementById("label4").value;
+        set(ref(db, 'counter/sensor4/label'), teks);   
+    }
+
+    document.getElementById("label5").addEventListener("change", gantiLabel5);
+
+    function gantiLabel5(){
+        let teks = document.getElementById("label5").value;
+        set(ref(db, 'counter/sensor5/label'), teks);   
+    }
+
+    document.getElementById("label6").addEventListener("change", gantiLabel6);
+
+    function gantiLabel6(){
+        let teks = document.getElementById("label6").value;
+        set(ref(db, 'counter/sensor6/label'), teks);   
+    }
+
+    
      
 </script>
 </body>
