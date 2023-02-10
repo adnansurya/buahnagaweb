@@ -216,6 +216,22 @@
         </div>        
       </div>
     </div>
+    <div class="row">
+        <div class="row justify-content-center text-center my-sm-5">
+          <div class="col-lg-6">          
+            <h2 class="text-dark mb-0">Conveyor</h2>
+            <p class="lead">Aktifkan / Hentikan Putaran Conveyor</p>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center py-1 mt-3">
+        <div class="col-4 mx-auto">
+            <div class="form-check form-switch ps-0">
+              <input class="form-check-input ms-auto mt-1" type="checkbox" id="flexSwitchCheckDefault">
+              <label class="form-check-label ms-2" for="flexSwitchCheckDefault" id="conLabel">Loading..</label>
+            </div>
+          </div>        
+      </div>
      
   </div>
 </section>
@@ -314,6 +330,19 @@
         
 
     });
+  
+
+    get(ref(db, 'conveyor')).then((snapshot) => {
+        let conVal = snapshot.val();
+        if(conVal == 1){
+            $('#flexSwitchCheckDefault').prop('checked', true);
+            document.getElementById('conLabel').textContent = "Conveyor Aktif";
+        }else{
+            $('#flexSwitchCheckDefault').prop('checked', false);
+            document.getElementById('conLabel').textContent = "Conveyor Berhenti";
+        }
+        // console.log("CON : " + conVal);
+    });
 
     document.getElementById("label1").addEventListener("change", gantiLabel1);
 
@@ -357,6 +386,22 @@
         let teks = document.getElementById("label6").value;
         set(ref(db, 'counter/sensor6/label'), teks);   
     }
+
+    document.getElementById("flexSwitchCheckDefault").addEventListener("change", setConveyor);
+
+    function setConveyor(){
+        let statCon = $('#flexSwitchCheckDefault').is(":checked");
+        if(statCon){
+            document.getElementById('conLabel').textContent = "Conveyor Aktif";
+            set(ref(db, 'conveyor'), 1);   
+        }else{
+            document.getElementById('conLabel').textContent = "Conveyor Berhenti";
+            set(ref(db, 'conveyor'), 0);
+        }
+        // console.log(statCon);
+    }
+
+    
 
     
      
