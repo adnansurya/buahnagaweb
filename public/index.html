@@ -234,7 +234,7 @@
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-  import { getDatabase, ref, child, get, set, onValue }  from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";  
+  import { getDatabase, ref, child, get, set, push, onValue }  from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";  
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -372,7 +372,28 @@
         set(ref(db, 'counter/sensor3/count'), parseInt(0));   
         set(ref(db, 'counter/sensor4/count'), parseInt(0));   
         set(ref(db, 'counter/sensor5/count'), parseInt(0));   
-        set(ref(db, 'counter/sensor6/count'), parseInt(0));   
+        set(ref(db, 'counter/sensor6/count'), parseInt(0));  
+        
+        const zeroPad = (num, places) => String(num).padStart(places, '0');
+        
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = zeroPad(today.getHours(), 2) + ":" + zeroPad(today.getMinutes(),2) + ":" + zeroPad(today.getSeconds(),2);
+        // var dateTime = date+' '+time;
+        
+        // A post entry.
+        let resetData = {
+          tanggal: date,
+          waktu: time,
+          label: "RESET COUNTER",
+          nomor: 0,
+          total: 0
+        };
+
+      
+        push(ref(db, 'histori'), resetData);
+
+        
       }
  
      
